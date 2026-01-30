@@ -1,0 +1,25 @@
+cabal-version:      3.16
+name:               skoczki
+version:            0.1.0.0
+license:            NONE
+author:             Jakub Koszorz
+maintainer:         kubakas12345@gmail.com
+build-type:         Simple
+
+common warnings
+    ghc-options: -Wall
+
+executable skoczki
+    import:           warnings
+    main-is:          skoczki.hs
+    build-depends:    base ^>=4.22.0.0
+    hs-source-dirs:   .
+    default-language: Haskell2010
+
+test-suite skoczki-tests
+    import:           warnings
+    type:             exitcode-stdio-1.0
+    main-is:          SkoczkiTests.hs
+    build-depends:    base ^>=4.22.0.0
+    hs-source-dirs:   .
+    default-language: Haskell2010
